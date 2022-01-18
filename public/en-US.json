@@ -1,0 +1,40 @@
+{
+  "language": "English",
+  "fundsheader": {
+    "addCurrency": "Add Funds",
+    "funds": "Money",
+    "loss": "Loss",
+    "profit": "Gain"
+  },
+  "chart": {
+    "sparkline": "- 7 Days Sparkline Diagram"
+  },
+  "coinslist": {
+    "filterlabel": "Order by",
+    "firstitem": "Most expensive",
+    "seconditem": "Least expensive",
+    "thirditem": "Highest gain (1 hour)",
+    "fourthitem": "Highest loss (1 hour)",
+    "fifthitem": "Highest gain (1 day)",
+    "sixthitem": "Highest loss (1 day)",
+    "seventhitem": "Owned",
+    "inputplaceholder": "Search...",
+    "inputnohits": "No search results"
+  },
+  "coinsitem": {
+    "price": "Price",
+    "pricechange1h": "Price change 1h",
+    "pricechange1d": "Price change 1d"
+  },
+  "menu": {
+    "addfunds": "Add Funds",
+    "showinfo": "Show Info"
+  },
+  "landing": {
+    "internetcoin": "1 Internet Money",
+    "greeting1": "Do you fear on missing out on the crypto-currency craze, but not enough to want to gamble with your savings? Then give this web-app a try! Here you can safely try investing as much virtual money as you want, and add more money if you go broke!",
+    "greeting2": "This web-app does not collect any personal information and have no hidden fees, it's just a personal project I put together to exercise my programming skills.",
+    "greeting3": "To use this app, simply chose a currency and start buying! You start with 1000 virtual USD and can add more by clicking on the menu button in the top right corner. Once you have bought a currency it will you a 'sell' button, click it to sell part of or all of your holding of that currency. More features might be added later.",
+    "start": "Start"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "language": "Svenska",
+  "fundsheader": {
+    "addCurrency": "Lägg till pengar",
+    "funds": "Pengar",
+    "loss": "Förlust",
+    "profit": "Vinst"
+  },
+  "chart": {
+    "sparkline": "- 7 Dagars Miniatyrdiagram"
+  },
+  "coinslist": {
+    "filterlabel": "Sortering",
+    "firstitem": "Dyrast",
+    "seconditem": "Billigast",
+    "thirditem": "Högsta ökning (1 timme)",
+    "fourthitem": "Högsta förlust (1 timme)",
+    "fifthitem": "Högsta ökning (1 dag)",
+    "sixthitem": "Högsta förlust (1 dag)",
+    "seventhitem": "Ägda",
+    "inputplaceholder": "Sök...",
+    "inputnohits": "Inga sökresultat"
+  },
+  "coinsitem": {
+    "price": "Pris",
+    "pricechange1h": "Prisförändring 1 t.",
+    "pricechange1d": "Prisförändring 1 d."
+  },
+  "menu": {
+    "addfunds": "Lägg till pengar",
+    "showinfo": "Visa info"
+  },
+  "landing": {
+    "internetcoin": "1 Internet Peng",
+    "greeting1": "Är du orolig för att missa chansen att bli crypto-miljonär, men osäker på om du vill riskera dina besparingar? Testa då den här appen! Här kan du i trygghet investera så mycket låtsaspengar du vill, och lägga till mer pengar ifall du blir pank!",
+    "greeting2": "Den här web-appen samlar inte in någon persondata och har inga dolda kostnader, det är bara ett personligt projekt jag slängde ihop för att visa upp min färdighet inom programmering",
+  "greeting3": "För att använda appen, välj helt enkelt en valuta och börja köpa! Du börjar med 1000 låtsasdollar och kan lägga till mer genom att klicka på meny-ikonen i övre högra hörnet efter du klickat på start-knappen. När du köpt en valuta så blir en 'sälj' knapp synlig, tryck på den för att sälja en del av eller hela mängden av den valutan som du äger. Flera funktioner kan tillkomma längre fram.",
+    "start": "Starta"
+  }
+}
