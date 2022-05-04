@@ -1,9 +1,10 @@
+import React from 'react'
 import { Typography } from '@mui/material'
-import React, { useEffect } from 'react'
 import { useCoins } from '../Contexts/Coingecko/use'
 import { useL10N } from '../Contexts/l10n/use'
 import bitcoin from '../images/Bitcoin.png'
 
+//  We should navigate to this page on the first time the user loads the page on a device
 export const LandingPage = () => {
   const {actions: {t}} = useL10N();
   const {actions: {ShowInfo}} = useCoins();
@@ -20,14 +21,6 @@ export const LandingPage = () => {
         >
           Cryptocurrency Trading Simulator
         </Typography>
-        {/* <div style={classes.coincontainer}>
-          <Typography
-            variant='h2'
-            style={classes.coin}
-          >
-            {t('landing.internetcoin')}
-          </Typography>
-        </div> */}
         <div style={classes.greetingswrapper}>
           <Typography
             style={classes.greeting}

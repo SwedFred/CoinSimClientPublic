@@ -1,3 +1,4 @@
+//  Support-class to check whether a text is a decimal number or not
 export const isDecimal = (text) => {
   var hasDot = false;
   var charCode;
@@ -6,8 +7,7 @@ export const isDecimal = (text) => {
     charCode = text.charCodeAt(i);
     if (i === 0 && (charCode < 48 || charCode > 57))
       return false;
-    if (charCode === 46 || charCode === 44)
-    {
+    if (charCode === 46 || charCode === 44) {
       if (hasDot)
         return false;
       else

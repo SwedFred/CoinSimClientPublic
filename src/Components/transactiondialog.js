@@ -1,10 +1,14 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useCoins } from '../Contexts/Coingecko/use'
+import { useL10N } from '../Contexts/l10n/use';
 import { isDecimal } from '../Helpers/isdecimal';
 
+//  Dialog used for both buying and selling currency
+//  TODO: Fix the hardcoded $ sign if we implement multiple fiat currencies
 export const TransactionDialog = () => {
   const {state: { transaction, transactionCurrency}, actions: {BuyCurrency, SellCurrency, BeginTransaction, GetAmountOwned}} = useCoins();
+  const {state: {}, actions: {t}} = useL10N();
   const [amount, setAmount] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -84,7 +88,7 @@ export const TransactionDialog = () => {
       open={open} 
       onClose={handleClose}
       maxWidth='sm'
-      fullWidth='true'
+      fullWidth={true}
       PaperProps={{sx: {border: '1px solid black'}}}
     >
       <DialogTitle>{ transactionCurrency ? GetAmountOwned(transactionCurrency.name) + ' ' + transactionCurrency.name + ' owned' : ''}</DialogTitle>
@@ -92,9 +96,9 @@ export const TransactionDialog = () => {
         <DialogContentText>
           {
             transaction === 'Buy' ?
-              'You are spending ' + amount + ' $ to get ' + amount / transactionCurrency.price + ' of ' + transactionCurrency.name
+              t('transaction.buying1') + amount + t('transaction.buying2') + amount / transactionCurrency.price + t('transaction.buying3') + transactionCurrency.name
             : transaction === 'Sell' ?
-              'You are selling ' + amount + ' of ' + transactionCurrency.name + ' to get ' + amount * transactionCurrency.price + ' $'
+            t('transaction.selling1') + amount + t('transaction.selling2') + transactionCurrency.name + t('transaction.selling3') + amount * transactionCurrency.price + ' $'
             : ''
           }
         </DialogContentText>

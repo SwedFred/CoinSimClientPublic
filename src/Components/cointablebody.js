@@ -25,9 +25,9 @@ export const CoinTableBody = ({data, page, pagesize}) => {
           <TableCell>{<p style={classes.text}>{row.price + "$"}</p>}</TableCell>
           <TableCell>{<ValueText value={GetTruncatedAmount(row.pricechange1h, 5)} tiny={true}/>}</TableCell>
           <TableCell>{<ValueText value={GetTruncatedAmount(row.pricechange1d, 5)} tiny={true}/>}</TableCell>
-          <TableCell><TransactionButton type={'Buy'} callback={() => OnTransaction('Buy', row.name)}/></TableCell>
+          <TableCell><TransactionButton type={'buy'} callback={() => OnTransaction('Buy', row.name)}/></TableCell>
           <TableCell>{ GetAmountOwned(row.name) > 0 
-                      ? <TransactionButton type={'Sell'} callback={() => OnTransaction('Sell', row.name)}/>
+                      ? <TransactionButton type={'sell'} callback={() => OnTransaction('Sell', row.name)}/>
                       : <span/>
                      }
           </TableCell>

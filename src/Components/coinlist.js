@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { CoinListItem } from './coinlistitem'
 import { useCoins } from '../Contexts/Coingecko/use';
 
+//  Represents the crypto coins as a list for mobile viewing
 export const CoinList = ({coins, callback}) => {
   const {state:{filter, order, wallet}, actions: {BeginTransaction, GetAmountOwned, ChangeChartIndex}} = useCoins();
   const [items, setItems] = useState(null);

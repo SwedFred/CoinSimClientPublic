@@ -20,8 +20,8 @@ export const CoinListItem = ({coin, position, chartcallback, buycallback, sellca
             <div style={{marginLeft: '4px'}}>({coin.symbol})</div>
           </div>
           <div style={classes.actionwrapper}>
-            <TransactionButton type={'Buy'} size={'small'} callback={() => buycallback()}/>
-            { amountowned > 0 ? <TransactionButton type={'Sell'} size={'small'} callback={() => sellcallback()}/> : <span style={{width: '40px'}}/>}
+            <TransactionButton type={'buy'} size={'small'} callback={() => buycallback()}/>
+            { amountowned > 0 ? <TransactionButton type={'sell'} size={'small'} callback={() => sellcallback()}/> : <span style={{width: '40px'}}/>}
           </div>
         </div>
         <div style={classes.valuecontainer}>

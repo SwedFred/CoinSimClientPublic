@@ -1,11 +1,12 @@
 import { Typography, useMediaQuery } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useCoins } from '../Contexts/Coingecko/use'
 import { DropDownMenu } from './dropdownmenu';
 import { GetTruncatedAmount } from '../Helpers/truncation'
 import { useL10N } from '../Contexts/l10n/use';
 import { useConfig } from '../Contexts/Config/use';
 
+//  Navbar that lets you keep track of your funds (fiat currency) and historical profit/loss
 export const FundsHeader = () => {
   const { state: {wallet}} = useCoins();
   const { actions: {t}} = useL10N();

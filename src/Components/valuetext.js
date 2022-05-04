@@ -1,5 +1,6 @@
 import React from 'react'
 
+//  Text used to represent gain/loss/neutral by coloring it
 export const ValueText = ({value, tiny}) => {
   return (
     <p style={classes.text(value, tiny)}>{value + "%"}</p>

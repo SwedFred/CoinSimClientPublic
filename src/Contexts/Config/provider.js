@@ -11,8 +11,7 @@ export const ConfigProvider = ({children}) => {
   },[])
 
   const GetDefaultLanguage = () => {
-    if (config)
-    {
+    if (config) {
       return config.defaultLanguage;
     }
   }

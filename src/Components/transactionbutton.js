@@ -1,14 +1,15 @@
-import { Button } from '@mui/material';
 import React from 'react'
+import { useL10N } from '../Contexts/l10n/use';
 
 export const TransactionButton = ({type, size, callback}) => {
+  const {state: {}, actions: {t}} = useL10N();
 
   return (
     <button 
       style={classes.btn(type, size)}
       onClick={() => callback()}
     >
-      {type}
+      {t(`coinslist.${type}`)}
     </button>
   )
 }
@@ -16,7 +17,7 @@ export const TransactionButton = ({type, size, callback}) => {
 const classes = {
   btn: (type, size) => ({
     color: 'white',
-    backgroundColor: type === 'Buy' ? 'green' : 'blue',
+    backgroundColor: type === 'buy' ? 'green' : 'blue',
     width: size === 'big' ? '50px' : '40px',
     height: size === 'big' ? '40px' : '20px',
     fontSize: size === 'big' ? 'large' : 'xx-small',

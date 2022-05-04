@@ -4,6 +4,7 @@ import * as d3 from 'd3'
 import { Typography } from '@mui/material';
 import { useL10N } from '../Contexts/l10n/use';
 
+//  Chart showing the sparkline of each coin
 export const Chart = ({name, dataset, size}) => {
   const {actions: {t}} = useL10N();
   const [dimensions, setDimensions] = useState({width: 600, height: 300, marginLeft: 80, marginRight: 80, marginTop: 60, marginBottom: 10});
@@ -15,10 +16,10 @@ export const Chart = ({name, dataset, size}) => {
     if (size)
     {
       const svgEl = d3.select(svgRef.current);
-      svgEl.selectAll('*').remove(); // Clear SVG
-      if (size === 'big')
+      svgEl.selectAll('*').remove();  // Clear SVG to redraw it
+      if (size === 'big')             // Desktop version
         setDimensions({width: 400, height: 200, marginLeft: 60, marginRight: 60, marginTop: 30, marginBottom: 30, fontsize: '0.75rem'});
-      else if (size === 'small')
+    else if (size === 'small')        // Mobile version
         setDimensions({width: window.innerWidth - 80, height: 150, marginLeft: 40, marginRight: 20, marginTop: 30, marginBottom: 20, fontsize: '0.5rem'});
     }
   },[size])
@@ -34,6 +35,7 @@ export const Chart = ({name, dataset, size}) => {
     DrawSvg();
   },[dataset])
 
+  //  Creates a diagram from the sparkline chart of the selected crypto currency
   const DrawSvg = () => {
     setSvgWidth(dimensions.width + dimensions.marginLeft + dimensions.marginRight);
     setSvgHeight(dimensions.height + dimensions.marginBottom + dimensions.marginTop);
@@ -47,7 +49,7 @@ export const Chart = ({name, dataset, size}) => {
                      .range([dimensions.height, 0]);
 
     const svgEl = d3.select(svgRef.current);
-    svgEl.selectAll('*').remove(); // Clear SVG
+    svgEl.selectAll('*').remove();
     const svg = svgEl.append("g")
                      .attr('transform', `translate(${dimensions.marginLeft},30)`);
     const xAxis = d3.axisBottom(xScale)

@@ -9,13 +9,13 @@ export const L10NProvider = ({children}) => {
   const { state: {config}, actions: {GetDefaultLanguage}} = useConfig();
 
   useEffect(() => {
-    if (config)
-    {
+    if (config) {
       var lang = GetLanguage();
       GetResources(lang);
     }
   },[config])
 
+  //  Get the relevant translation from json and cache it
   const GetResources = (lang) => {
     axios({
       method: 'get',
@@ -30,15 +30,11 @@ export const L10NProvider = ({children}) => {
 
   const GetLanguage = () => {
     var lang = localStorage.getItem('language');
-    if (!lang)
-    {
-      if (config)
-      {
+    if (!lang) {
+      if (config) {
         lang = GetDefaultLanguage();
         if (!lang)
-        {
-          lang = 'en-US'
-        }
+          lang = 'en-US';
         setLanguage(lang);
       }
     }
@@ -53,13 +49,13 @@ export const L10NProvider = ({children}) => {
     GetResources(lang);
   }
 
+  //  Gets a translatable string from the translation cache
   const t = (key) => {
     if (!language || !resources)
       return;
     const splitted = key.split('.');
     var result;
-    if (splitted.length > 0)
-    {
+    if (splitted.length > 0) {
       try {
         for (var i = 0; i < splitted.length; i++) {
           if (i === 0)

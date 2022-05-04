@@ -19,7 +19,9 @@
     "sixthitem": "Högsta förlust (1 dag)",
     "seventhitem": "Ägda",
     "inputplaceholder": "Sök...",
-    "inputnohits": "Inga sökresultat"
+    "inputnohits": "Inga sökresultat",
+    "buy": "Köp",
+    "sell": "Sälj"
   },
   "coinsitem": {
     "price": "Pris",
@@ -36,5 +38,19 @@
     "greeting2": "Den här web-appen samlar inte in någon persondata och har inga dolda kostnader, det är bara ett personligt projekt jag slängde ihop för att visa upp min färdighet inom programmering",
   "greeting3": "För att använda appen, välj helt enkelt en valuta och börja köpa! Du börjar med 1000 låtsasdollar och kan lägga till mer genom att klicka på meny-ikonen i övre högra hörnet efter du klickat på start-knappen. När du köpt en valuta så blir en 'sälj' knapp synlig, tryck på den för att sälja en del av eller hela mängden av den valutan som du äger. Flera funktioner kan tillkomma längre fram.",
     "start": "Starta"
+  },
+  "transaction": {
+    "buying1": "Du spenderar ",
+    "buying2": " $ för att få ",
+    "buying3": " av ",
+    "selling1": "Du säljer ",
+    "selling2": " av ",
+    "selling3": " för att få "
+  },
+  "addfunds": {
+    "explanation1": "Du lägger till ",
+    "explanation2": " $ till ditt konto",
+    "cancelbutton": "Avbryt",
+    "addbutton": "Lägg till"
   }
 }

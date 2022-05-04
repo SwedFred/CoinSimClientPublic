@@ -1,5 +1,5 @@
 {
-  "WebHubURL": "https://coinsim.azurewebsites.net/cryptohub",
+  "WebHubURL": "https://localhost:44319/cryptohub",
   "defaultLanguage": "en-US",
   "defaultCurrency": "USD"
 }

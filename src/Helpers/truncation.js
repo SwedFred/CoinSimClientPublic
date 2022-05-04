@@ -1,3 +1,4 @@
+//  Helper class to truncate text to a set amount of decimals, useful for currencies with very small values
 export const GetTruncatedAmount = (text, take = 0) => {
   if (!text)
     return '0';

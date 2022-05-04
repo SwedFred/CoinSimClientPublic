@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const CoinLabel = ({url, name, tiny}) => {
-
   return (
     <div style={{display: 'flex', flexDirection: 'row',alignItems: 'center'}}>
       <img style={{width: '16px', height: '16px', marginRight: '4px'}} src={url} alt={name}/>

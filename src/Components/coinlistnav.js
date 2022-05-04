@@ -23,7 +23,7 @@ export const CoinListNav = ({coins, callback}) => {
         <Select
           labelId="select-label"
           id="select-id"
-          value={selected}
+          value={selected || ""}
           sx={classes.select}
           onChange={HandleChanges}
           autoWidth={true}

@@ -10,6 +10,7 @@ import TableFooter from '@mui/material/TableFooter';
 import TablePagination from '@mui/material/TablePagination'
 import { TablePaginationNav } from './tablepaginationnav';
 
+//  Represents the crypto coins as a table for desktop view
 export const CoinTable = (data, callback) => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [page, setPage] = useState(0);

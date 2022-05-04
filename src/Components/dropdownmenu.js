@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useCoins } from '../Contexts/Coingecko/use';
 import { useL10N } from '../Contexts/l10n/use';
 
+//  Dropdown menu for the fundsheader
 export const DropDownMenu = () => {
   const {actions: {SetAddFunds, ShowInfo}} = useCoins();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -41,8 +42,8 @@ export const DropDownMenu = () => {
       >
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <MenuItem onClick={() => handleChangeLanguage('sv-SE')} sx={{display: 'block'}}>Swedish</MenuItem>
-          <MenuItem onClick={() => handleChangeLanguage('en-US')} sx={{display: 'block'}} divider='true'>English</MenuItem>
-          <MenuItem onClick={() => handleAddFunds('funds')} sx={{display: 'block'}} divider='true'>{t('menu.addfunds')}</MenuItem>
+          <MenuItem onClick={() => handleChangeLanguage('en-US')} sx={{display: 'block'}} divider={true}>English</MenuItem>
+          <MenuItem onClick={() => handleAddFunds('funds')} sx={{display: 'block'}} divider={true}>{t('menu.addfunds')}</MenuItem>
           <MenuItem onClick={() => showInfo()} sx={{display: 'block'}}>{t('menu.showinfo')}</MenuItem>
         </div>
       </Menu>

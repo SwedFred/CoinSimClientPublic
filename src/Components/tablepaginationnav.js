@@ -6,6 +6,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft'
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight'
 import LastPageIcon from '@mui/icons-material/LastPage'
 
+//  Table pagination implementation
 export const TablePaginationNav = (props) => {
   const { count, page, rowsPerPage, onPageChange } = props;
 
